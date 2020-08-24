@@ -4,7 +4,7 @@ from django.shortcuts import render , redirect , get_object_or_404
 def index(request):
     print("index.html 진입")
 
-    return render(request , 'index.html')
+    return render(request , 'layout.html')
 
 
 def post_like(request, pk):

@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +58,9 @@ ROOT_URLCONF = 'study.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR , 'templates'],
+        'DIRS': [
+            os.path.join(BASE_DIR , 'study' , 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,7 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR , 'study' , 'static')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR , 'study' , 'static')
+    ]
+# STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
 
+#  file저장하는 곳 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR , "study" ,  'media')
+MEDIA_ROOT = os.path.join(BASE_DIR ,  'media')
+
+LOGIN_REDIRECT_URL = '/'
