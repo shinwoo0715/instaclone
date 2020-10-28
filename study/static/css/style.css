@@ -195,6 +195,7 @@ body{
 }
 .contents .sprite_more_icon{
     position: relative;
+    cursor: pointer;
 }
 
 .contents .toggle_box{

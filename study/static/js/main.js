@@ -36,7 +36,7 @@ function delegationFunc(e) {
 
                 // 서버와 통신할때 var likeCount = document.querySelector('#like-count-' + pk);
                 var likeCount = document.querySelector('#like-count-39');
-                likeCount.innerHTML = '좋아요' + response.like_count + '개';
+                likeCount.innerHTML = '' + response.like_count + '';
 
             },
 

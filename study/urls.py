@@ -7,9 +7,12 @@ from . import views
 urlpatterns = [
 
     re_path("^$", views.index, name='index'),
+    path("layout/" , views.layout , name='layout'),
     path("accounts/", include('accounts.urls')),
     path("accounts/", include("allauth.urls")),
 
+    path("post/" , include("post.urls" , namespace="post")),
+    path("" , lambda r: redirect("post:post_list") , name='root'), 
 
     path('admin/', admin.site.urls),
 ]

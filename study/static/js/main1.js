@@ -96,7 +96,7 @@ function callMorePostAjax(page){
   
   if (page > 5){
     return;
-  }s
+  }
 
   $.ajax({
     type: "POST",

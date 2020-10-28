@@ -25,7 +25,7 @@ SECRET_KEY = 'h%6ncwz0y69bs8c9wgkh3#$a$b^ao8-jrdlut%pq!h&&%0$mse'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'accounts',
+    'post',
 ]
 
 MIDDLEWARE = [
@@ -133,5 +134,7 @@ STATICFILES_DIRS = [
 #  file저장하는 곳 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR ,  'media')
+
+SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
